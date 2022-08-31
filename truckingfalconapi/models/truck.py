@@ -1,9 +1,13 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 
 class Truck(models.Model):
+    """_summary_
 
-    plate_num = models.OneToOneField(User, on_delete=models.CASCADE)
+    Args:
+        models (_type_): _description_
+    """
+
+    plate_number = models.CharField(max_length=20)
     color = models.CharField(max_length=20)
     make = models.CharField(max_length=20)
