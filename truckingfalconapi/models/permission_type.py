@@ -7,4 +7,4 @@ class PermissionType(models.Model):
     Args:
         models (_type_): _description_
     """
-    permission = models.CharField(max_length=15)
+    permission_type = models.CharField(max_length=15)

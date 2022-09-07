@@ -1,0 +1,20 @@
+[
+    {
+        "model": "truckingfalconapi.truck",
+        "pk": 1,
+        "fields": {
+            "plate_number": "D654H0",
+            "color": "red",
+            "make": "Volvo"
+        }
+    },
+    {
+        "model": "truckingfalconapi.truck",
+        "pk": 2,
+        "fields": {
+            "plate_number": "IFN63S",
+            "color": "blue",
+            "make": "Tesla"
+        }
+    }
+]

@@ -1,6 +1,6 @@
-from dataclasses import fields
 from django.db import models
-from truckingfalconapi.models.employee import Employee
+from .employee import Employee
+from .truck import Truck
 
 
 class Delivery(models.Model):
@@ -9,13 +9,11 @@ class Delivery(models.Model):
     Args:
         models (_type_): _description_
     """
-    employee_id = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
     from_address = models.CharField(max_length=50)
     destination = models.CharField(max_length=50)
-    start_date = models.DateField()
+    start_date = models.DateTimeField(auto_now_add=True)
     loaded = models.BooleanField()
     total_miles = models.FloatField()
-    truck_id = models.IntegerField()
-    finish_date = models.DateTimeField()
-
-# finish up the functions input for each of the fields, then check back with Leigha Saturday
+    truck = models.ForeignKey(Truck, on_delete=models.CASCADE)
+    finish_date = models.DateTimeField(auto_now_add=True)

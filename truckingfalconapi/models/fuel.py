@@ -1,5 +1,5 @@
 from django.db import models
-from truckingfalconapi.models.delivery import Delivery
+from .delivery import Delivery
 
 
 class Fuel(models.Model):
@@ -9,8 +9,8 @@ class Fuel(models.Model):
         models (_type_): _description_
     """
 
-    delivery_id = models.OneToOneField(Delivery, on_delete=models.CASCADE)
-    fuel_price = models.FloatField()
-    gallons_fuel = models.FloatField()
-    fuel_date = models.DateField()
-    total_fuel_cost = models.FloatField()
+    delivery = models.ForeignKey(Delivery, on_delete=models.CASCADE)
+    fuel_price = models.DecimalField(max_digits=7, decimal_places=4)
+    gallons_fuel = models.DecimalField(max_digits=8, decimal_places=4)
+    fuel_date = models.DateTimeField(auto_now_add=True)
+    total_fuel_cost = models.DecimalField(max_digits=7, decimal_places=3)

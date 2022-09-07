@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from truckingfalconapi.models.permission_type import PermissionType
+from .permission_type import PermissionType
 
 
 class Employee(models.Model):
@@ -11,5 +11,5 @@ class Employee(models.Model):
     """
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    permission_type = models.ForeignKey(
-        PermissionType, on_delete=models.CASCADE)
+    permission_type = models.ManyToManyField(
+        PermissionType)

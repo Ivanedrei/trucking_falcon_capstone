@@ -1,0 +1,9 @@
+[
+    {
+        "model": "truckingfalconapi.employee",
+        "pk": 1,
+        "fields": {
+            "user_id": 1
+        }
+    }
+]

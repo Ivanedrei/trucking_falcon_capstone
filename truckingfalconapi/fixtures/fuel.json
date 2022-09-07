@@ -1,0 +1,24 @@
+[
+    {
+        "model": "truckingfalconapi.fuel",
+        "pk": 1,
+        "fields": {
+            "delivery_id": 1,
+            "fuel_price": 4.50,
+            "gallons_fuel": 30.50,
+            "fuel_date": "2022-08-25 13:24:27.172Z",
+            "total_fuel_cost": 137.25
+        }
+    },
+    {
+        "model": "truckingfalconapi.fuel",
+        "pk": 2,
+        "fields": {
+            "delivery_id": 2,
+            "fuel_price": 4.30,
+            "gallons_fuel": 15,
+            "fuel_date": "2022-08-28 13:24:27.172Z",
+            "total_fuel_cost": 64.50
+        }
+    }
+]

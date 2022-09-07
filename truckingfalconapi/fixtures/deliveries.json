@@ -1,0 +1,30 @@
+[
+    {
+        "model": "truckingfalconapi.delivery",
+        "pk": 1,
+        "fields": {
+            "employee_id": 1,
+            "from_address": "123 street st.",
+            "destination": "321 road rd",
+            "start_date": "2022-08-20 12:00:50.637635",
+            "loaded": "True",
+            "total_miles": 50000.10,
+            "truck_id": 1,
+            "finish_date": "2022-08-24 16:00:50.637635"
+        }
+    },
+    {
+        "model": "truckingfalconapi.delivery",
+        "pk": 2,
+        "fields": {
+            "employee_id": 1,
+            "from_address": "321 road st.",
+            "destination": "123 street st.",
+            "start_date": "2022-08-25 10:00:50.637635",
+            "loaded": "False",
+            "total_miles": 55000.40,
+            "truck_id": 1,
+            "finish_date": "2022-08-29 14:00:50.637635"
+        }
+    }
+]

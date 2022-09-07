@@ -1,0 +1,10 @@
+[
+    {
+        "model": "truckingfalconapi.employee_permission_type",
+        "pk": 1,
+        "fields": {
+            "employee_id": 1,
+            "permissiontype_id": 1
+        }
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "model": "truckingfalconapi.permissiontype",
+        "pk": 1,
+        "fields": {
+            "permission_type": "Driver"
+        }
+    },
+    {
+        "model": "truckingfalconapi.permissiontype",
+        "pk": 2,
+        "fields": {
+            "permission_type": "Manager"
+        }
+    }
+]
