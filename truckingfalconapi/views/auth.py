@@ -11,7 +11,7 @@ from truckingfalconapi.models import Employee
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def login_user(request):
-    '''Handles the authentication of a gamer
+    '''Handles the authentication of a employee
 
     Method arguments:
       request -- The full HTTP request object
@@ -30,6 +30,7 @@ def login_user(request):
             'valid': True,
             'token': token.key
         }
+        print(data)
         return Response(data)
     else:
         # Bad login details were provided. So we can't log the user in.
@@ -51,13 +52,13 @@ def register_user(request):
     new_user = User.objects.create_user(
         username=request.data['username'],
         password=request.data['password'],
+        email=request.data["email"],
         first_name=request.data['first_name'],
         last_name=request.data['last_name']
     )
 
     # Now save the extra info in the truckingfalconapi_employee table
     employee = Employee.objects.create(
-        bio=request.data['bio'],
         user=new_user
     )
 
