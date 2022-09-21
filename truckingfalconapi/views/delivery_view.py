@@ -50,6 +50,7 @@ class DeliveryView(ViewSet):
         delivery = serializer.save(employee=employee)
         ids = DeliverySerializer(delivery)
         return Response(ids.data, status=status.HTTP_201_CREATED)
+    print("created")
 
     def update(self, request, pk):
         """Handle PUT requests for a delivery
@@ -82,7 +83,7 @@ class DeliverySerializer(serializers.ModelSerializer):
         fields = ['id', 'employee', 'from_address', 'destination',
                   'start_date', 'loaded', 'total_miles', 'truck',
                   'finish_date']
-        depth = 1
+        depth = 3
 
 
 class CreateDeliverySerializer(serializers.ModelSerializer):

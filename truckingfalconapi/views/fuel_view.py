@@ -43,7 +43,7 @@ class FuelView(ViewSet):
         Returns:
             Response -- JSON serialized fuel instance
         """
-        delivery = Delivery.objects.get(pk=request.data["delivery"])
+        delivery = Delivery.objects.get(pk=request.data["delivery_id"])
         serializer = CreateFuelSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         fuel = serializer.save(delivery=delivery)

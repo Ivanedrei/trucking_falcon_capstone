@@ -9,7 +9,7 @@ from truckingfalconapi.models.fuel import Fuel
 from truckingfalconapi.models.truck import Truck
 
 
-class FuelView(ViewSet):
+class TruckView(ViewSet):
     """Level up game types view"""
 
     def retrieve(self, request, pk):
@@ -31,9 +31,9 @@ class FuelView(ViewSet):
             Response -- JSON serialized list of delivery by permission type
         """
         truck = Truck.objects.all()
-        delivery_id = request.query_params.get('id', None)
-        if delivery_id is not None:
-            delivery = delivery.filter(delivery_id=delivery)
+        # delivery_id = request.query_params.get('id', None)
+        # if delivery_id is not None:
+        #     delivery = delivery.filter(delivery_id=delivery)
 
         serializer = TruckSerializer(truck, many=True)
         return Response(serializer.data)
@@ -65,6 +65,6 @@ class TruckSerializer(serializers.ModelSerializer):
     """JSON serializer for delivery
     """
     class Meta:
-        model = Fuel
+        model = Truck
         fields = ['id', 'plate_number', 'color', 'make']
-        depth = 1
+        # depth = 1
